@@ -7,17 +7,45 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.demoformsc.MainActivity$PlaceholderFragment" >
-	<com.handmark.pulltorefresh.library.PullToRefreshListView 
+	<com.handmark.pulltorefresh.library.PullToRefreshScrollView
 	    xmlns:ptr="http://schemas.android.com/apk/res-auto"
         android:id="@+id/pull_refresh_list"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:verticalSpacing="5dp"
-        android:horizontalSpacing="1dp"
-        android:columnWidth="1000dp"
-        android:stretchMode="columnWidth" 
         android:gravity="fill"
+        ptr:ptrMode="both"
 	    >
-	</com.handmark.pulltorefresh.library.PullToRefreshListView>
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="9000dp"
+	        android:orientation="vertical" 
+	        android:id="@+id/SrcollLinear"
+	        >
+	        <HorizontalScrollView 
+	            android:layout_width="match_parent"
+	        	android:layout_height="100dp"
+	        	android:id="@+id/horizontalScrollView "
+	            >
+	            <LinearLayout 
+	                android:layout_width="wrap_content"
+	        		android:layout_height="match_parent"
+	        		android:orientation="horizontal"
+	        		android:id="@+id/horizontalLinear"
+	                >
+					<TextView 
+	                	android:layout_width="wrap_content"
+	        			android:layout_height="30dp"
+	        			android:text="1231541qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqdsqqq"
+	                	/>
+					<TextView 
+	                	android:layout_width="wrap_content"
+	        			android:layout_height="30dp"
+	        			android:text="1231541qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqdsqqq"
+	                	/>
+	            </LinearLayout>
+
+	        </HorizontalScrollView>
+	    </LinearLayout>
+	</com.handmark.pulltorefresh.library.PullToRefreshScrollView>
 
 </RelativeLayout>
